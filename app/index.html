@@ -11,6 +11,7 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/animations.css">
         <!-- endbuild -->
@@ -41,7 +42,7 @@
             </div>
         </div>
 
-        <div class="container {{className}}">
+        <div class="container {{currentView}}" ng-controller="RouteanimationmanagerCtrl">
             <div ng-view class="animated container"></div>
         </div>
 
@@ -72,6 +73,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/routeanimationmanager.js"></script>
         <!-- endbuild -->
     </body>
 </html>
