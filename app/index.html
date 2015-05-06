@@ -11,8 +11,10 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Roboto+Condensed:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/about.css">
         <link rel="stylesheet" href="styles/animations.css">
         <!-- endbuild -->
     </head>
@@ -42,8 +44,8 @@
             </div>
         </div>
 
-        <div class="container {{currentView}}" ng-controller="RouteanimationmanagerCtrl">
-            <div ng-view class="animated container"></div>
+        <div class="container" route-animation-manager>
+            <div ng-view class="animation-view container"></div>
         </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -73,7 +75,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/routeanimationmanager.js"></script>
+        <script src="scripts/controllers/angular-route-animation-manager.js"></script>
         <!-- endbuild -->
     </body>
 </html>

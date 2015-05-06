@@ -1,30 +1,46 @@
-.fadein {
-    
+.animation-view {
+    transition: 2s linear all;
 }
-.fadein.ng-enter {
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
+.about {
+    .animation-view {
+        /*&.ng-enter {
+            left: 100%;
+            //animation: reveal 5s linear;
+        }
+        &.ng-enter.ng-enter-active {
+            left: 0;
+        }*/
+    }
+}
+.main {
+    .animation-view {
+
+        &.ng-enter {
+            left: 100%;
+            //animation: reveal 5s linear;
+        }
+        &.ng-enter.ng-enter-active {
+            left: 0;
+        }
+        &.ng-leave {
+            left: 0;
+            //animation: reveal-hide 5s linear;
+        }
+        &.ng-leave.ng-leave-active {
+            left: 100%;
+        }
+    }
 }
 
-.fadein.ng-leave {
-    opacity: 1;
-}
-.fadein.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-.fadein.ng-leave {
-    transition: 1s linear all;
-    -webkit-transition: 1s linear all;
-    -moz-transition: 1s linear all;
-    -o-transition: 1s linear all;
-}
-.animated.container {
-    transition: 1s linear all;
-    -webkit-transition: 1s linear all;
-    -moz-transition: 1s linear all;
-    -o-transition: 1s linear all;
+@keyframes reveal {
+    from { clip-path: circle(0% at center) }
+    to { clip-path: circle(100% at center) }
 }
 
+@keyframes reveal-hide {
+    from { clip-path: circle(100% at center) }
+    to { clip-path: circle(0% at center) }
+}
 
 /*!
 Animate.css - http://daneden.me/animate

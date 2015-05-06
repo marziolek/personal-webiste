@@ -21,11 +21,21 @@ angular
     $routeProvider
         .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        data: {
+            animationConf: {
+                fallback: 'lol'
+            }
+        }
     })
         .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        data: {
+            animationConf: {
+                fallback: 'slide'
+            }
+        }
     })
         .otherwise({
         redirectTo: '/'
