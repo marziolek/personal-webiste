@@ -1,4 +1,34 @@
 .about-view {
-    background-color: #8C959E;
+    background-color: #1A6AF3;
     height: 100%;
+    position: relative;
+    padding: 4rem;
+    color: white;
+    .funky-font {
+        font-size: 4rem;
+    }
+    li {
+        position: relative;
+        transition: padding .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &:before {
+            content: '';
+            width: .8rem;
+            height: .8rem;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: -.8rem;
+            opacity: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        &:hover {
+            padding-left: .3rem;
+            &:before {
+                left: -1.4rem;
+                opacity: 1;
+            }
+        }
+    }
 }

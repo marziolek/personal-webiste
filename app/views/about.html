@@ -1,7 +1,6 @@
 <div class="about-view">
-    <button ng-click="showHello()">Show hello</button>
-    <div ng-if="shouldShowHello" class="fadein animated">
-        <h2>Hello</h2>
-        <button ng-click="reset()">Reset</button>
-    </div>
+    <p class="funky-font">Bio</p>
+    <ul>
+        <li class="animate-list-item" ng-repeat="bioItem in bio | filter:q"><span ng-bind-html="bioItem"></span></li>
+    </ul>
 </div>

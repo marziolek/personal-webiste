@@ -24,7 +24,8 @@ angular
         controller: 'MainCtrl',
         data: {
             animationConf: {
-                fallback: 'lol'
+                about: 'unreveal',
+                fallback: 'fade'
             }
         }
     })
@@ -33,7 +34,7 @@ angular
         controller: 'AboutCtrl',
         data: {
             animationConf: {
-                fallback: 'slide'
+                fallback: 'reveal'
             }
         }
     })
